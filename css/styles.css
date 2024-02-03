@@ -1,125 +1,144 @@
 body {
     margin: 0;
     padding: 0;
-
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: rgb(180, 161, 135);
 }
 
-.television {
+#space {
+    height: 55em;
+    width: 90em;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3em;
     flex-wrap: wrap;
+
+    background-color: blue;
+    border-radius: 0.4em;
+    border: 0.2em solid black;
 }
 
-.screen {
-    height: 60em;
-    width: 100em;
-
-    background-color: #cecece;
-    border-radius: 0.5em;
-    transition: 0.4s;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-style: solid;
-    flex-wrap: wrap;
-    border-width: 1em;
-    border-radius: 2em;
-    border-color: black;
-}
-
-.screenTop {
-    height: 27em;
-    width: 96em;
-    background-color: aqua;
-    border-radius: 0.5em;
-    margin-bottom: 1em;
-    flex-wrap: wrap;
-}
-
-.screenBottom {
-    height: 27em;
-    width: 96em;
-    background-color: aqua;
-    border-radius: 0.5em;
-    flex-wrap: wrap;
-}
-
-.cardTop {
-    display: inline;
-    background-color: bisque;
-    flex-wrap: wrap;
-}
-
-.channelBottom {
-    flex-direction: row;
-    align-items: center;
-    height: 10em;
-    width: 21em;
-    background-color: bisque;
-    margin: 1.5em;
-    border-radius: 1em;
-    flex-wrap: wrap;
-}
-
-.control {
+#screen {
     height: 40em;
-    width: 20em;
+    width: 70em;
+    margin: 2em;
 
-    background-color: #cecece;
-    border-radius: 0.5em;
-    transition: 0.4s;
+    border-radius: 1em;
+    border: 0.5em solid black;
+
+}
+
+
+.tv {
+    background-color: black;
+}
+
+#bannerTop {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
+.channel {
+    background-color: aliceblue;
+    margin-right: 0.5em;
+    /*visibility: hidden;*/
+}
+
+.data {
+    background-color: aliceblue;
+    margin-right: 0.5em;
+    /*visibility: hidden;*/
+}
+
+.hour {
+    background-color: aliceblue;
+    margin-right: 0.5em;
+    /*visibility: hidden;*/
+}
+
+#bannerSound {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    margin: 1em;
+
+}
+
+.soundDown {
+    background-color: antiquewhite;
+    margin-right: 0.5em;
+}
+
+.soundUp {
+    background-color: antiquewhite;
+}
+
+
+#remoteControl {
+    height: 25em;
+    width: 10em;
 
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0.5em;
+    background-color: cadetblue;
+    margin-left: 5em;
+}
+
+#containerBtn {
+    width: 9em;
+    height: 24em;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.button {
+    background-color: brown;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
     justify-content: center;
     align-items: center;
-    border-style: solid;
-    flex-wrap: wrap;
-    margin: 3em;
-    border-width: 1em;
-    border-radius: 2em;
-    border-color: black;
+
+    margin: 1.6em;
+    transition: 0.2s;
+    cursor: pointer;
 }
 
-.controlTop {
-    height: 5em;
-    width: 17em;
-    background-color: aqua;
-    border-radius: 0.5em;
-    margin-bottom: 1em;
-    flex-wrap: wrap;
+.button:hover{
+    transition: 0.2s;
+    background-color: darkred;
 }
 
-.buttonTop {
-    display: inline;
-    background-color: bisque;
-    flex-wrap: wrap;
+.canal1 {
+    background-image: url(../img/primeVideo.jpg);
 }
 
-.buttonsControl {
-    height: 30em;
-    width: 17em;
-    background-color: aqua;
-    border-radius: 0.5em;
+.canal2 {
+    background-color: purple;
 }
 
-.btnControl {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 2.2em;
-    width: 2.2em;
-    background-color: bisque;
-    margin: 1.68em;
-    border-radius: 1em;
+.canal3 {
+    background-color: greenyellow;
+}
+
+.canal4 {
+    background-color: gold;
 }
