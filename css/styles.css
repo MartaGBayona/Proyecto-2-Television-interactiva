@@ -12,6 +12,7 @@ body {
     background-image:url(../img/background-img.png);
     background-image: no-repeat fixed center;
     background-size: cover;
+    overflow-x: hidden;
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -192,4 +193,14 @@ body {
     background-image: url(../img/warner.logo.png);
     background-image: no-repeat fixed center;
     background-size: cover;
+}
+
+.on {
+    background-image: url(../img/home.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+}
+
+.off {
+    background-color: black;
 }
