@@ -11,30 +11,30 @@ let screen = document.getElementById("screen");
 
 //TV On/Off
 
-// let isTvOn = false;
+let isTvOn = false;
 
-// remoteControl.addEventListener('click', () => {
-//     isTvOn = !isTvOn;
-//     if (isTvOn) {
-//         screen.style.backgroundColor = '#222';
-//         enableRemote();
-//     } else {
-//         screen.style.backgroundColor = 'black';
-//         disableRemote();
-//     }
-// });
+onOffButton.addEventListener('click', () => {
+    isTvOn = !isTvOn;
+    if (isTvOn) {
+        screen.style.backgroundColor = '#222';
+        enableRemote() ;
+    } else {
+        screen.style.backgroundColor = 'black';
+        disableRemote() ;
+    }
+});
 
-// function enableRemote() {
-//     remoteButtons.forEach(button => {
-//         button.disabled = false;
-//     });
-// }
+function enableRemote() {
+    arrayButtons.forEach(button => {
+        button.disabled = false;
+    });
+}
 
-// function disableRemote() {
-//     remoteButtons.forEach(button => {
-//         button.disabled = true;
-//     });
-// }
+function disableRemote() {
+    arrayButtons.forEach(button => {
+        button.disabled = true;
+    });
+}
 
 //Interactive buttons
 
@@ -46,7 +46,7 @@ arrayButtons.map(
             console.log(screen)
         })
     }
-)
+);
 
 
 //Interactive date
@@ -70,3 +70,14 @@ function updateTime() {
 }
 setInterval(updateTime, 1000);
 updateTime();
+
+//Data hidden
+
+const info = document.getElementById("data");
+
+if (!isTvOn) {
+    data.style.display = "none";
+
+} else {
+    data.style.display = "";
+};
