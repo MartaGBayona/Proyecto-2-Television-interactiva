@@ -11,30 +11,30 @@ let screen = document.getElementById("screen");
 
 //TV On/Off
 
-let isTvOn = false;
+// let isTvOn = false;
 
-remoteControl.addEventListener('click', (e) => {
-    isTvOn = !isTvOn;
-    if (isTvOn) {
-        screen.style.backgroundColor = '#222';
-        enableRemote();
-    } else {
-        screen.style.backgroundColor = 'black';
-        disableRemote();
-    }
-});
+// remoteControl.addEventListener('click', (e) => {
+//     isTvOn = !isTvOn;
+//     if (isTvOn) {
+//         screen.style.backgroundColor = '#222';
+//         enableRemote();
+//     } else {
+//         screen.style.backgroundColor = 'black';
+//         disableRemote();
+//     }
+// });
 
-function enableRemote() {
-    remoteButtons.forEach(button => {
-        button.disabled = false;
-    });
-}
+// function enableRemote() {
+//     remoteButtons.forEach(button => {
+//         button.disabled = false;
+//     });
+// }
 
-function disableRemote() {
-    remoteButtons.forEach(button => {
-        button.disabled = true;
-    });
-}
+// function disableRemote() {
+//     remoteButtons.forEach(button => {
+//         button.disabled = true;
+//     });
+// }
 
 //Interactive buttons
 
@@ -66,6 +66,5 @@ function updateTime() {
     const dateTimeString = now.toLocaleString('en-En', options);
     data.textContent = dateTimeString;
 }
-
-// Actualizar la hora cada segundo
 setInterval(updateTime, 1000);
+updateTime();

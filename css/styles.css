@@ -131,16 +131,35 @@ body {
 
 .canal1 {
     background-image: url(../img/primeVideo.jpg);
+    
 }
 
 .canal2 {
-    background-color: purple;
+    background-image: url(../img/apple.logo.jpg);
 }
 
 .canal3 {
-    background-color: greenyellow;
+    background-image: url(../img/creativelive.jpg);
 }
 
 .canal4 {
-    background-color: gold;
+    background-image: url(../img/netflix.logo.jpg);
 }
+
+.canal5 {
+    background-image: url(../img/paramount.logo.jpeg);
+    
+}
+
+.canal6 {
+    background-image: url(../img/Talk-TV-logo.jpg);
+}
+
+.canal7 {
+    background-image: url(../img/Twitch_Logo.jpg);
+}
+
+.canal8 {
+    background-image: url(../img/warner.logo.png);
+}
+
