@@ -7,6 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     background-color: rgb(180, 161, 135);
 }
@@ -43,6 +44,7 @@ body {
 #bannerTop {
     display: flex;
     flex-direction: row;
+
     margin: 1em;
 }
 
