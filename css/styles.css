@@ -1,29 +1,30 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;222
     flex-wrap: wrap;
 
-    background-color: rgb(180, 161, 135);
+    background-image:url(../img/background-img.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #space {
     height: 55em;
     width: 90em;
 
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
-    background-color: blue;
-    border-radius: 0.4em;
-    border: 0.2em solid black;
 }
 
 #screen {
@@ -43,45 +44,50 @@ body {
 
 #bannerTop {
     display: flex;
-    flex-direction: row;
 
     margin: 1em;
 }
 
 .channel {
-    background-color: aliceblue;
+    color: aliceblue;
     margin-right: 0.5em;
     /*visibility: hidden;*/
 }
 
 #data {
-    background-color: aliceblue;
+    color: aliceblue;
     margin-right: 0.5em;
-    /*visibility: hidden;*/
-}
-
-.hour {
-    background-color: aliceblue;
-    margin-right: 0.5em;
-    /*visibility: hidden;*/
+    /* visibility: hidden; */
 }
 
 #bannerSound {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
 
     margin: 1em;
+    visibility: hidden;
 
 }
 
 .soundDown {
-    background-color: antiquewhite;
     margin-right: 0.5em;
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
 }
 
 .soundUp {
-    background-color: antiquewhite;
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+}
+
+#onOff {
+    background-color: brown;
 }
 
 
@@ -93,14 +99,16 @@ body {
     justify-content: space-around;
     align-items: center;
     border-radius: 0.5em;
-    background-color: cadetblue;
     margin-left: 5em;
+
 }
 
 #containerBtn {
-    width: 9em;
-    height: 24em;
-    background-color: aqua;
+    width: 10em;
+    height: 27em;
+    border-radius: 34%;
+
+    background-color: rgb(160, 160, 160);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -109,7 +117,7 @@ body {
 
 
 .button {
-    background-color: brown;
+    background-color: rgb(97, 97, 97);
     height: 2em;
     width: 2em;
     border-radius: 50%;
@@ -124,42 +132,64 @@ body {
     cursor: pointer;
 }
 
-.button:hover{
+#buttonHdmi {
+    visibility: hidden;
+}
+
+.button:hover {
+    transition: 0.2s;
+    background-color: rgb(50, 50, 50);
+}
+
+#onOff:hover {
     transition: 0.2s;
     background-color: darkred;
 }
 
 .canal1 {
     background-image: url(../img/primeVideo.jpg);
-    
+    background-image: no-repeat fixed center;
+    background-size: cover;
 }
 
 .canal2 {
     background-image: url(../img/apple.logo.jpg);
+    background-image: no-repeat fixed center;
+    background-size: cover;
 }
 
 .canal3 {
     background-image: url(../img/creativelive.jpg);
+    background-image: no-repeat fixed center;
+    background-size: cover;
 }
 
 .canal4 {
     background-image: url(../img/netflix.logo.jpg);
+    background-image: no-repeat fixed center;
+    background-size: cover;
 }
 
 .canal5 {
     background-image: url(../img/paramount.logo.jpeg);
-    
+    background-image: no-repeat fixed center;
+    background-size: cover;
 }
 
 .canal6 {
     background-image: url(../img/Talk-TV-logo.jpg);
+    background-image: no-repeat fixed center;
+    background-size: cover;
 }
 
 .canal7 {
     background-image: url(../img/Twitch_Logo.jpg);
+    background-image: no-repeat fixed center;
+    background-size: cover;
 }
 
 .canal8 {
     background-image: url(../img/warner.logo.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
 }
-

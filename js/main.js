@@ -13,7 +13,7 @@ let screen = document.getElementById("screen");
 
 // let isTvOn = false;
 
-// remoteControl.addEventListener('click', (e) => {
+// remoteControl.addEventListener('click', () => {
 //     isTvOn = !isTvOn;
 //     if (isTvOn) {
 //         screen.style.backgroundColor = '#222';
@@ -43,9 +43,11 @@ arrayButtons.map(
         item.addEventListener("click", (e) =>{
             screen.classList.remove(screen.classList[screen.classList.length - 1])
             screen.classList.add("canal" + e.target.id.slice(-1))
+            console.log(screen)
         })
     }
 )
+
 
 //Interactive date
 
