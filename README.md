@@ -1,7 +1,6 @@
 <h1 align="center"> PROJECT 2. INTERACTIVE TV: </h1>
 
-
-<image src="./img/home.png" alt="TtituloWeb">
+***
 
 ## Tabla de Contenido :file_folder:
 

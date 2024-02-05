@@ -32,9 +32,11 @@ body {
     height: 40em;
     width: 70em;
 
-    border-radius: 1em;
-    border: 0.5em solid #4D5061;
+    border-radius: 0.8em;
+    border: 0.7em solid #4D5061;
     border-bottom: 4.5em solid #4D5061;
+
+    box-shadow: 1em 1em 4em;
 }
 
 
@@ -89,22 +91,23 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 1em;
     margin-left: 5em;
-
 }
+
+
 
 #containerBtn {
     width: 9em;
     height: 33em;
-    border-radius: 34%;
+    border-radius: 4em;
 
     background-color: #4D5061;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 0.2em solid #3b3d4b;
+    border: 0.1em solid #3b3d4b;
 
+    box-shadow: 1em 1em 4em;
 }
 
 
