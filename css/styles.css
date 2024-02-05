@@ -54,7 +54,7 @@ body {
     /*visibility: hidden;*/
 }
 
-#data {
+#date {
     color: aliceblue;
     margin-right: 0.5em;
     /* visibility: hidden; */
@@ -125,54 +125,6 @@ body {
     justify-content: space-around;
     align-items: center;
 
-}
-
-.channel {
-    width: 3.5em;
-    height: 3.5em;
-
-}
-
-.channel1 {
-    background-image: url(../img/1.png);
-    background-image: no-repeat fixed center;
-    background-size: cover;
-}
-
-.channel2 {
-    background-image: url(../img/2.png);
-    background-image: no-repeat fixed center;
-    background-size: cover;
-}
-
-.channel3 {
-    background-image: url(../img/3.png);
-    background-image: no-repeat fixed center;
-    background-size: cover;
-}
-
-.channel4 {
-    background-image: url(../img/4.png);
-    background-image: no-repeat fixed center;
-    background-size: cover;
-}
-
-.channel5 {
-    background-image: url(../img/6.png);
-    background-image: no-repeat fixed center;
-    background-size: cover;
-}
-
-.channel7 {
-    background-image: url(../img/7.png);
-    background-image: no-repeat fixed center;
-    background-size: cover;
-}
-
-.channel8 {
-    background-image: url(../img/8.png);
-    background-image: no-repeat fixed center;
-    background-size: cover;
 }
 
 
