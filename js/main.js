@@ -23,7 +23,7 @@ date.style.display = "none";
 function toggleTv() {
     isTvOn = !isTvOn;
     if (isTvOn) {
-        screen.style.backgroundColor = '#6A687A';
+        screen.style.backgroundColor = 'gray';
         enableRemote();
         channel.style.visibility = "visible";
         channel.textContent = "Home"; 
@@ -56,6 +56,7 @@ arrayButtons.map(button => {
     button.addEventListener("click", (e) => {
         screen.classList.remove(screen.classList[screen.classList.length - 1]);
         screen.classList.add("canal" + e.target.id.slice(-1));
+        console.log(screen)
         channel.textContent = "Canal " + e.target.textContent;
     });
 });
