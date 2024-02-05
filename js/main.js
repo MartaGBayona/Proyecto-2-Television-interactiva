@@ -17,9 +17,12 @@ onOffButton.addEventListener('click', () => {
     isTvOn = !isTvOn;
     if (isTvOn) {
         screen.style.backgroundColor = '#222';
+
         enableRemote() ;
     } else {
         screen.style.backgroundColor = 'black';
+        screen.classList.remove(screen.classList[screen.classList.length - 1])
+
         disableRemote() ;
     }
 });

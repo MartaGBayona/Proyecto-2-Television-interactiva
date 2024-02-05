@@ -87,8 +87,20 @@ body {
     border-bottom: 100px solid green;
 }
 
-#onOff {
+.buttonOnOff {
     background-color: brown;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1.6em;
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 
