@@ -35,7 +35,6 @@ body {
 
     border-radius: 1em;
     border: 0.5em solid black;
-
 }
 
 
@@ -128,6 +127,54 @@ body {
 
 }
 
+.channel {
+    width: 3.5em;
+    height: 3.5em;
+
+}
+
+.channel1 {
+    background-image: url(../img/1.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+}
+
+.channel2 {
+    background-image: url(../img/2.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+}
+
+.channel3 {
+    background-image: url(../img/3.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+}
+
+.channel4 {
+    background-image: url(../img/4.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+}
+
+.channel5 {
+    background-image: url(../img/6.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+}
+
+.channel7 {
+    background-image: url(../img/7.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+}
+
+.channel8 {
+    background-image: url(../img/8.png);
+    background-image: no-repeat fixed center;
+    background-size: cover;
+}
+
 
 .button {
     background-color: rgb(97, 97, 97);
@@ -205,14 +252,4 @@ body {
     background-image: url(../img/warner.logo.png);
     background-image: no-repeat fixed center;
     background-size: cover;
-}
-
-.on {
-    background-image: url(../img/home.png);
-    background-image: no-repeat fixed center;
-    background-size: cover;
-}
-
-.off {
-    background-color: black;
 }
