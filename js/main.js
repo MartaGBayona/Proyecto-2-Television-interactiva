@@ -14,20 +14,22 @@ const channel = document.querySelector("#bannerTop .channel");
 
 const date = document.getElementById("date");
 
-// const soundUp = document.getElementById("btnUp")
+const soundUp = document.getElementById("btnUp")
 
-// const soundDown = document.getElementById("btnnDown")
+const soundDown = document.getElementById("btnDown")
 
-// let infoSoundUp = document.getElementById("infoSoundUp");
+const infoSoundUp = document.getElementById("infoSoundUp");
 
-// let infoSoundDown = document.getElementById("infoSoundDown")
+const infoSoundDown = document.getElementById("infoSoundDown")
 
 
 //Tv on/Off, enable and disable buttons and date
 let isTvOn = false;
+let volumeTimeout;
+
 disableRemote();
-// infoSoundUp.style.visibility = "hidden";
-// infoSoundDown.style.visibility = "hidden";
+infoSoundUp.style.visibility = "hidden";
+infoSoundDown.style.visibility = "hidden";
 channel.style.visibility = "hidden";
 date.style.display = "none"; 
 
@@ -38,17 +40,15 @@ function toggleTv() {
         enableRemote();
         channel.style.visibility = "visible";
         channel.textContent = "Home"; 
-        // infoSoundUp.style.visibility = "visible";
-        // infoSoundDown.style.visibility = "visible";
         updateTime(); 
         toggleFecha();
-        // volumeTimeout();
+
     } else {
         screen.style.backgroundColor = 'black';
         screen.classList.remove(screen.classList[screen.classList.length - 1]);
-        // infoSoundUp.style.visibility = "hidden";
-        // infoSoundDown.style.visibility = "hidden";
         disableRemote();
+        infoSoundUp.style.visibility = "hidden";
+        infoSoundDown.style.visibility = "hidden";
         channel.style.visibility = "hidden"; 
         toggleFecha();
     }
@@ -72,7 +72,6 @@ arrayButtons.map(button => {
     button.addEventListener("click", (e) => {
         screen.classList.remove(screen.classList[screen.classList.length - 1]);
         screen.classList.add("canal" + e.target.id.slice(-1));
-        console.log(screen)
         channel.textContent = "Canal " + e.target.textContent;
     });
 });
@@ -118,20 +117,22 @@ if (isTvOn) {
 
 //Buttons Sound
 
-// let volumeTimeout;
+soundUp.addEventListener("click", (e) => {
+    if (isTvOn) {
+        clearTimeout(volumeTimeout);
+        infoSoundUp.style.visibility = "visible";
+        volumeTimeout = setTimeout(() => {
+            infoSoundUp.style.visibility = "hidden";
+        }, 2500);
+    }
+});
 
-// soundUp.addEventListener("click", function(){
-//     clearTimeout(volumeTimeout);
-//     infoSoundUp.style.display = "block";
-//     volumeTimeout = setTimeout(function() {
-//         bannerSound.style.display = "none";
-//     }, 5000);
-// });
-
-// soundDown.addEventListener("click", function(){
-//     clearTimeout(volumeTimeout);
-//     infoSoundDown.style.display = "block";
-//     volumeTimeout = setTimeout(function() {
-//         bannerSound.style.display = "none";
-//     }, 5000);
-// });
+soundDown.addEventListener("click", (e) => {
+    if (isTvOn) {
+        clearTimeout(volumeTimeout);
+        infoSoundDown.style.visibility = "visible";
+        volumeTimeout = setTimeout(() => {
+            infoSoundDown.style.visibility = "hidden";
+        }, 2500);
+    }
+});

@@ -61,9 +61,21 @@ body {
 
 #bannerSound {
     display: flex;
-    justify-content: flex-end;
     margin: 1em;
-    visibility: hidden;
+
+}
+
+#infoSoundUp {
+    color: rgb(19, 172, 19);
+    font-size: 3em;
+    font-weight: 900;
+
+}
+
+#infoSoundDown{
+    color: rgba(255, 0, 0, 0.724);
+    font-size: 3em;
+    font-weight: 900;
 
 }
 
@@ -224,4 +236,12 @@ body {
     background-image: url(../img/warner.logo.png);
     background-image: no-repeat fixed center;
     background-size: cover;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
