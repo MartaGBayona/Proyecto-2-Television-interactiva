@@ -37,6 +37,7 @@ body {
     border-bottom: 4.5em solid #4D5061;
 
     box-shadow: 1em 1em 4em;
+
 }
 
 
@@ -66,14 +67,14 @@ body {
 }
 
 #infoSoundUp {
-    color: rgb(19, 172, 19);
+    color: #72B843;
     font-size: 3em;
     font-weight: 900;
 
 }
 
 #infoSoundDown{
-    color: rgba(255, 0, 0, 0.724);
+    color: #AF1B3F;
     font-size: 3em;
     font-weight: 900;
 

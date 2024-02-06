@@ -36,7 +36,7 @@ date.style.display = "none";
 function toggleTv() {
     isTvOn = !isTvOn;
     if (isTvOn) {
-        screen.style.backgroundColor = 'gray';
+        screen.style.backgroundColor = '#767981';
         enableRemote();
         channel.style.visibility = "visible";
         channel.textContent = "Home"; 
