@@ -81,6 +81,7 @@ body {
     margin: 1.6em;
     transition: 0.2s;
     cursor: pointer;
+    font-weight: 800;
 }
 
 
@@ -111,7 +112,7 @@ body {
 }
 
 
-.button {
+.button  {
     background-color: whitesmoke;
     height: 2.5em;
     width: 2.5em;
@@ -125,6 +126,34 @@ body {
     margin: 1.6em;
     transition: 0.2s;
     cursor: pointer;
+    font-weight: 800;
+}
+
+#bannerSound {
+    color: aliceblue;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-content:flex-end ;
+    justify-content: flex-end;
+
+}
+
+
+.buttonSound {
+    background-color: #A9C5A0;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1.6em;
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: 800;
 }
 
 #buttonHdmi {
@@ -142,6 +171,11 @@ body {
 #onOff:hover {
     transition: 0.2s;
     background-color: darkred;
+}
+
+.buttonSound:hover {
+    transition: 0.2s;
+    background-color: #a9c5a0be;
 }
 
 .canal1 {

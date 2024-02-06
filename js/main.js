@@ -14,9 +14,16 @@ const channel = document.querySelector("#bannerTop .channel");
 
 const date = document.getElementById("date");
 
+// const soundUp = document.getElementById("btnUp")
+
+// const soundDown = document.getElementById("btnnDown")
+
+// let bannerSound = document.getElementById("bannerSound")
+
 //Tv on/Off, enable and disable buttons and date
 let isTvOn = false;
 disableRemote();
+// bannerSound.style.visibility = "hidden";
 channel.style.visibility = "hidden";
 date.style.display = "none"; 
 
@@ -27,11 +34,14 @@ function toggleTv() {
         enableRemote();
         channel.style.visibility = "visible";
         channel.textContent = "Home"; 
+        // bannerSound.style.visibility = "visible";
         updateTime(); 
         toggleFecha();
+        // volumeTimeout();
     } else {
         screen.style.backgroundColor = 'black';
         screen.classList.remove(screen.classList[screen.classList.length - 1]);
+        // bannerSound.style.visible = "hidden";
         disableRemote();
         channel.style.visibility = "hidden"; 
         toggleFecha();
@@ -79,6 +89,9 @@ function updateTime() {
 function toggleFecha() {
     if (isTvOn) {
         date.style.display = "block";
+        setTimeout(function() {
+            date.style.display ="none";
+        },5000);
     } else {
         date.style.display = "none";
     }
@@ -95,3 +108,24 @@ setInterval(() => {
 if (isTvOn) {
     toggleFecha();
 }
+
+
+//Buttons Sound
+
+// let volumeTimeout;
+
+// soundUp.addEventListener("click", function(){
+//     clearTimeout(volumeTimeout);
+//     bannerSound.style.display = "block";
+//     volumeTimeout = setTimeout(function() {
+//         bannerSound.style.display = "none";
+//     }, 5000);
+// });
+
+// soundDown.addEventListener("click", function(){
+//     clearTimeout(volumeTimeout);
+//     bannerSound.style.display = "block";
+//     volumeTimeout = setTimeout(function() {
+//         bannerSound.style.display = "none";
+//     }, 5000);
+// });
