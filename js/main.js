@@ -18,12 +18,16 @@ const date = document.getElementById("date");
 
 // const soundDown = document.getElementById("btnnDown")
 
-// let bannerSound = document.getElementById("bannerSound")
+// let infoSoundUp = document.getElementById("infoSoundUp");
+
+// let infoSoundDown = document.getElementById("infoSoundDown")
+
 
 //Tv on/Off, enable and disable buttons and date
 let isTvOn = false;
 disableRemote();
-// bannerSound.style.visibility = "hidden";
+// infoSoundUp.style.visibility = "hidden";
+// infoSoundDown.style.visibility = "hidden";
 channel.style.visibility = "hidden";
 date.style.display = "none"; 
 
@@ -34,14 +38,16 @@ function toggleTv() {
         enableRemote();
         channel.style.visibility = "visible";
         channel.textContent = "Home"; 
-        // bannerSound.style.visibility = "visible";
+        // infoSoundUp.style.visibility = "visible";
+        // infoSoundDown.style.visibility = "visible";
         updateTime(); 
         toggleFecha();
         // volumeTimeout();
     } else {
         screen.style.backgroundColor = 'black';
         screen.classList.remove(screen.classList[screen.classList.length - 1]);
-        // bannerSound.style.visible = "hidden";
+        // infoSoundUp.style.visibility = "hidden";
+        // infoSoundDown.style.visibility = "hidden";
         disableRemote();
         channel.style.visibility = "hidden"; 
         toggleFecha();
@@ -116,7 +122,7 @@ if (isTvOn) {
 
 // soundUp.addEventListener("click", function(){
 //     clearTimeout(volumeTimeout);
-//     bannerSound.style.display = "block";
+//     infoSoundUp.style.display = "block";
 //     volumeTimeout = setTimeout(function() {
 //         bannerSound.style.display = "none";
 //     }, 5000);
@@ -124,7 +130,7 @@ if (isTvOn) {
 
 // soundDown.addEventListener("click", function(){
 //     clearTimeout(volumeTimeout);
-//     bannerSound.style.display = "block";
+//     infoSoundDown.style.display = "block";
 //     volumeTimeout = setTimeout(function() {
 //         bannerSound.style.display = "none";
 //     }, 5000);
