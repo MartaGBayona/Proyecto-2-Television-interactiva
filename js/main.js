@@ -33,7 +33,8 @@ infoSoundDown.style.visibility = "hidden";
 channel.style.visibility = "hidden";
 date.style.display = "none"; 
 
-function toggleTv() {
+
+toggleTv = () => {
     isTvOn = !isTvOn;
     if (isTvOn) {
         screen.style.backgroundColor = '#767981';
@@ -77,7 +78,10 @@ arrayButtons.map(button => {
 });
 
 // Date function
-function updateTime() {
+
+onOffButton.addEventListener('click', toggleTv);
+
+const updateTime = () => {
     const now = new Date();
     const options = {
         year: 'numeric',
@@ -91,10 +95,10 @@ function updateTime() {
     date.textContent = dateTimeString;
 }
 
-function toggleFecha() {
+const toggleFecha = () => {
     if (isTvOn) {
         date.style.display = "block";
-        setTimeout(function() {
+        setTimeout (() => {
             date.style.display ="none";
         },5000);
     } else {
@@ -102,17 +106,7 @@ function toggleFecha() {
     }
 }
 
-onOffButton.addEventListener('click', toggleTv);
 
-setInterval(() => {
-    if (isTvOn) {
-        updateTime();
-    }
-}, 1000);
-
-if (isTvOn) {
-    toggleFecha();
-}
 
 
 //Buttons Sound
@@ -121,7 +115,7 @@ soundUp.addEventListener("click", (e) => {
     if (isTvOn) {
         clearTimeout(volumeTimeout);
         infoSoundUp.style.visibility = "visible";
-        volumeTimeout = setTimeout(() => {
+        volumeTimeout = setTimeout((e) => {
             infoSoundUp.style.visibility = "hidden";
         }, 2500);
     }
@@ -131,7 +125,7 @@ soundDown.addEventListener("click", (e) => {
     if (isTvOn) {
         clearTimeout(volumeTimeout);
         infoSoundDown.style.visibility = "visible";
-        volumeTimeout = setTimeout(() => {
+        volumeTimeout = setTimeout((e) => {
             infoSoundDown.style.visibility = "hidden";
         }, 2500);
     }
