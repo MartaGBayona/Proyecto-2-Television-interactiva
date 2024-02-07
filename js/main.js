@@ -1,6 +1,5 @@
 
 // selection of html and css elements
-const remoteButtons = document.querySelectorAll("#remoteControl .button");
 
 const onOffButton = document.getElementById("onOff");
 
@@ -23,18 +22,32 @@ const infoSoundUp = document.getElementById("infoSoundUp");
 const infoSoundDown = document.getElementById("infoSoundDown")
 
 
-//Tv on/Off, enable and disable buttons and date
+//Declare the variable isTvOn to false so that it tracks the state of the screen
 let isTvOn = false;
 let volumeTimeout;
 
-disableRemote();
+//functions that enables and disables the controller buttons
+const enableRemote = () => {
+    arrayButtons.forEach(button => {
+        button.disabled = false;
+    });
+}
+
+const disableRemote = () => {
+    arrayButtons.forEach(button => {
+        button.disabled = true;
+    });
+}
+
+//Disables the TV and remote functions when loading the page
+disableRemote()
 infoSoundUp.style.visibility = "hidden";
 infoSoundDown.style.visibility = "hidden";
 channel.style.visibility = "hidden";
 date.style.display = "none"; 
 
-
-toggleTv = () => {
+//Changes the state of the screen and the functionality of the controller
+const toggleTv = () => {
     isTvOn = !isTvOn;
     if (isTvOn) {
         screen.style.backgroundColor = '#767981';
@@ -43,7 +56,6 @@ toggleTv = () => {
         channel.textContent = "Home"; 
         updateTime(); 
         toggleFecha();
-
     } else {
         screen.style.backgroundColor = 'black';
         screen.classList.remove(screen.classList[screen.classList.length - 1]);
@@ -54,21 +66,10 @@ toggleTv = () => {
         toggleFecha();
     }
 }
+onOffButton.addEventListener('click', toggleTv);
 
-function enableRemote() {
-    arrayButtons.forEach(button => {
-        button.disabled = false;
-    });
-}
-
-function disableRemote() {
-    arrayButtons.forEach(button => {
-        button.disabled = true;
-    });
-}
 
 // Interactive channel and info integrated
-
 arrayButtons.map(button => {
     button.addEventListener("click", (e) => {
         screen.classList.remove(screen.classList[screen.classList.length - 1]);
@@ -78,9 +79,6 @@ arrayButtons.map(button => {
 });
 
 // Date function
-
-onOffButton.addEventListener('click', toggleTv);
-
 const updateTime = () => {
     const now = new Date();
     const options = {
@@ -89,16 +87,18 @@ const updateTime = () => {
         day: 'numeric',
         hour: 'numeric',
         minute: 'numeric',
+        second: "numeric",
         hour12: true
     };
     const dateTimeString = now.toLocaleString('en-En', options);
     date.textContent = dateTimeString;
 }
 
-const toggleFecha = () => {
+//date display range
+toggleFecha = () => {
     if (isTvOn) {
         date.style.display = "block";
-        setTimeout (() => {
+        setTimeout(() => {
             date.style.display ="none";
         },5000);
     } else {
@@ -106,27 +106,28 @@ const toggleFecha = () => {
     }
 }
 
-
-
-
-//Buttons Sound
-
-soundUp.addEventListener("click", (e) => {
+//Time update
+setInterval(() => {
     if (isTvOn) {
-        clearTimeout(volumeTimeout);
+        updateTime();
+    }
+}, 1000);
+
+//Sound and time interval buttons
+soundUp.addEventListener("click", () => {
+    if (isTvOn) {
         infoSoundUp.style.visibility = "visible";
-        volumeTimeout = setTimeout((e) => {
+        setTimeout(() => {
             infoSoundUp.style.visibility = "hidden";
-        }, 2500);
+        }, 1000);
     }
 });
 
-soundDown.addEventListener("click", (e) => {
+soundDown.addEventListener("click", () => {
     if (isTvOn) {
-        clearTimeout(volumeTimeout);
         infoSoundDown.style.visibility = "visible";
-        volumeTimeout = setTimeout((e) => {
+        setTimeout(() => {
             infoSoundDown.style.visibility = "hidden";
-        }, 2500);
+        }, 1000);
     }
 });

@@ -52,7 +52,7 @@ We create a television and a remote control that allows you to turn the device o
 ## Bugs :boom:
 
 - Only the basic functionalities have been implemented.
-- Volume up and down capability is missing.
+- The TV turns off suddenly sometimes after turning it on for the first time. The bug is not located
 - Channel selection menu is missing.
 - The design is not responsive.
 - Implementation of static images.
